@@ -1,0 +1,94 @@
+/* START: Task 1 Styles */
+
+.table {
+    margin: 20px auto;
+}
+
+.cell {
+    background-color: white;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* END: Task 1 Styles */
+
+
+/* START: Task 2 Styles */
+
+.form {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.noti {
+    width: 50%;
+    display: none;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* END: Task 2 Styles */
+
+
+/* START: Task 3 Styles */
+
+.court-container {
+    position: relative;
+    max-width: 600px;
+    height: 330px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.ball {
+    position: absolute;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+}
+
+.team-a {
+    float: left;
+    width: 50%;
+}
+
+.team-b {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+
+.goal-a {
+    display: inline-block;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 31px;
+    top: 157px;
+    cursor: pointer;
+}
+
+.goal-b {
+    display: inline-block;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 33px;
+    top: 157px;
+    cursor: pointer;
+}
+
+.noti-board {
+    text-align: center;
+}
+
+
+/* END: Task 3 Styles */

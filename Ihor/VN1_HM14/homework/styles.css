@@ -1,0 +1,65 @@
+/* write your styles here */
+/* write your styles here */
+
+.title {
+  text-align: center;
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+}
+
+.group-label {
+    margin-right: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group select {
+    width: 150px;
+}
+
+.field-group:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: green;
+  color: #fff;
+  font-weight: bold;
+}
+
+.arrow {
+  color: yellow;
+  cursor: pointer;
+}
+
+.table tbody tr:nth-child(2n + 1) {
+  background-color: rgb(235, 235, 235);
+}
+
+.table tbody tr:hover {
+  background-color: rgb(68, 68, 68);
+  color: white;
+  cursor: pointer;
+}
+
+.table th,
+.table td {
+  border: 1px solid grey;
+  padding: 15px 20px;
+}

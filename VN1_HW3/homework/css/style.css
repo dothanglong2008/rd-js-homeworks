@@ -1,0 +1,424 @@
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+/* General elements */
+
+p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+blockquote {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    background-color: #fff;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    width: 100%;
+    margin: 5px;
+}
+
+
+/* Block Element */
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    color: rgb(90, 89, 89);
+}
+
+.container {
+    margin: 10px 15%;
+}
+
+.content-box {
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.box {
+    flex: 1 1 50%;
+    height: 300px;
+}
+
+.wrapper {
+    padding: 40px;
+}
+
+
+/* Positioning */
+
+.padding-wide {
+    padding: 50px;
+}
+
+.padding-medium {
+    padding: 30px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.padding-bottom {
+    padding-bottom: 30px;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.align-center {
+    margin: auto;
+}
+
+
+/* Color */
+
+.btn {
+    background-color: #019999;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+}
+
+.circle-clip {
+    clip-path: circle(30% at center);
+}
+
+.cyan-bg {
+    background-color: #76CDD8;
+}
+
+.green-bg {
+    background-color: #019999;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.cyan-text {
+    color: #76CDD8;
+}
+
+.grey-text {
+    color: grey;
+}
+
+.red-text {
+    color: red;
+}
+
+
+/* Header */
+
+.flex-container-blocks,
+.flex-container-content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.bottom {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+/* Section - Single Article */
+
+.single-article {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.single-article .flex-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.single-article .text-box {
+    flex: 1 1 65%;
+}
+
+section.single-article .image-box {
+    flex: 1 1 35%;
+}
+
+section.single-article .btn {
+    justify-self: flex-end;
+}
+
+section.single-article .btn:hover {
+    background-color: rgb(118, 205, 216);
+}
+
+
+/* Section Plans */
+
+.plans {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.plans .flex-item {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section.plans .image-box {
+    flex: 1 1 35%;
+}
+
+section.plans .plans-box {
+    flex: 1 1 65%;
+    padding: 20px;
+}
+
+section.plans .plans-box .flex-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 5px;
+    width: calc(50% - 5px - 5px);
+}
+
+section.plans .plans-box .single-plan {
+    border: 2px solid #019999;
+}
+
+section.plans .plans-box .single-plan:hover {
+    box-shadow: 0 0 0 0.2rem #24d4d4;
+}
+
+section.plans .plans-box .single-plan .btn:hover {
+    background-color: #24d4d4;
+}
+
+section.plans .plans-box .single-plan .flex-item {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section.plans .plans-box .single-plan .flex-item h3,
+section.plans .plans-box .single-plan .flex-item p {
+    flex: 1 1 100%;
+}
+
+
+/* Section Application Form */
+
+.application-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.application-form .flex-item {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.application-form .flex-item {
+    flex: 1 1 100%;
+}
+
+.application-form {
+    position: relative;
+    margin-bottom: 240px;
+}
+
+.application-form .form-title {
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-bottom: 20px;
+}
+
+.application-form .form-body {
+    position: absolute;
+    width: 80%;
+    top: 80px;
+    z-index: 1;
+}
+
+.application-form .form-body .flex-item {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.application-form .form-body .flex-item {
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.application-form .form-body .btn:hover {
+    background-color: rgb(118, 205, 216);
+}
+
+.application-form .form-body .flex-item .flex-item {
+    flex: 1 1 100%;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer .flex-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%;
+}
+
+footer .info-box {
+    padding-left: 100px;
+}
+
+footer .info-box .flex-item {
+    flex: 1 1 50%;
+    display: block;
+}
+
+footer .copyright {
+    flex: 1 1 100%;
+}
+
+
+/* 2) Add a hover effect for the section 1, 2, 3. */
+
+
+/* a) Text color - #76cdd8. (see Figure 2.B) */
+
+.cyan-hover:hover {
+    color: #76cdd8
+}
+
+
+/* b) Add triangle which should be located in the top right or left corner depend on the text. (see Figure 2.B) */
+
+.right-triangle:hover::before {
+    position: absolute;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px;
+    border-color: transparent;
+    border-top: 30px solid #87CEFA;
+    border-right: 0px;
+}
+
+.left-triangle:hover::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px;
+    border-color: transparent;
+    border-top: 30px solid #87CEFA;
+    border-left: 0px;
+}
+
+
+/* 3) Add a hover effect for the button (background-color: rgb(118, 205, 216)) ( see Figure 3) */
+
+
+/* 5a) Add a hover effect for the button (background-color: rgb(118, 205, 216)) ( see Figure 5) */
+
+.btn:hover {
+    background-color: rgb(118, 205, 216);
+}
+
+
+/* 4) Add scale effect on hover to image in section 3 (see Figure 4) */
+
+
+/* 5b) Add scale effect on hover to image in section 4 */
+
+
+/* 6) Add scale effect on hover to image in section 6 ( see Figure 6) */
+
+.scale:hover {
+    transform: scale(1.1);
+}
+
+
+/* 6a) Add a hover effect for plan (see Figure 6.B) (For block: box-shadow: 0 0 0 0.2rem
+#24d4d4, for Button: background: #24d4d4;) */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #24d4d4;
+    box-shadow: 0 0 0 0.2rem #24d4d4;
+}
+
+
+/* 6b) Show special discount only on hover in Advanced plan (see Figure 6.C) */
+
+.special {
+    display: none;
+    font-size: 10px;
+    left: 20px;
+}
+
+.advanced .btn:hover+div.special {
+    position: absolute;
+    display: block;
+}

@@ -1,0 +1,44 @@
+/* write your styles here */
+
+h1 {
+    text-align: center;
+}
+
+.radio-button-container,
+.radio,
+.radio-label {
+    cursor: pointer;
+}
+
+.table {
+    border: 1px solid grey;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#thead {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.arrow {
+    color: yellow;
+    cursor: pointer;
+}
+
+.row:nth-child(2n+1) {
+    background-color: rgb(235, 235, 235);
+}
+
+.row:hover {
+    background-color: rgb(68, 68, 68);
+    color: white;
+    cursor: pointer;
+}
+
+.th,
+.cell {
+    padding: 25px 50px;
+}

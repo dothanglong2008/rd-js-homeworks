@@ -1,0 +1,13 @@
+@import './variables';
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: $font-size;
+}
+
+#root {
+  height: 100vh;
+  margin: 0 25%;
+  text-align: center;
+}
+

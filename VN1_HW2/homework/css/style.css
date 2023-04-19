@@ -1,0 +1,206 @@
+/* 1) You need to create a print version of the web-page.*/
+
+@media print {
+    div.tm-sidebar,
+    section #about,
+    section.heading,
+    section.blocks,
+    #ideas,
+    section.tm-content-box,
+    section::before {
+        display: none;
+    }
+    .tm-banner {
+        border: none !important;
+    }
+    #home div.tm-content-box {
+        margin-bottom: 0;
+    }
+    .tm-team-description-container {
+        padding: 0;
+    }
+    section div.tm-content-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-item {
+        padding: 1.5em;
+    }
+    .flex-item:nth-child(1) {
+        flex: 1 1 60%;
+    }
+    .flex-item:nth-child(2) {
+        flex: 1 1 40%;
+    }
+    p::first-letter {
+        font-size: 30px;
+        color: #779495;
+    }
+    h2.tm-section-title {
+        color: #3137B2;
+    }
+    .tm-section-description {
+        text-indent: 10%;
+    }
+    p.tm-section-description:first-of-type {
+        font-style: italic;
+    }
+}
+
+
+/* 2) Tiles with text should have hover effect */
+
+.box-bg:hover {
+    background-color: #87CEFA;
+}
+
+.tm-box-bg-title:hover {
+    color: #F5F5F5;
+    font-weight: bold;
+}
+
+
+/* 3) Change color of first letter in each paragraphs to lightskyblue (#87CEFA) and font size to 30px. */
+
+p::first-letter {
+    color: #87CEFA;
+    font-size: 30px;
+}
+
+
+/* 4) Add box shadow to navigation and each content block. Add grey border to the banner */
+
+.tm-main-nav,
+.tm-content-box {
+    box-shadow: 0 0 10px 0.5px grey;
+}
+
+.tm-banner {
+    border: 20px solid #F5F5F5;
+    padding: 0;
+}
+
+
+/* 5) Add triangle to each section on the page using pseudo elements. (see left top corner in Figure 6) */
+
+.flex-2-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+section::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 250px;
+    border-color: transparent;
+    border-top: 30px solid #87CEFA;
+    border-left: 0px;
+}
+
+
+/* 6) Change color of ‘How We Do It’ to gainsboro and add letter spacing 5px. */
+
+#ideas .tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+
+/* 7) Each first paragraph which placed after h2 tag should have italic font style. */
+
+h2+p {
+    font-style: italic;
+}
+
+
+/* 8) Text in the paragraph should look like in Figure 7. (vertical space between lines is increased, there
+is some free space at the start of the first line). Pay attentions, that the text in first banner block should not have such styles (see Figure 8): */
+
+h2~p:not(.tm-banner-text) {
+    line-height: 1.5;
+    text-indent: 10%;
+}
+
+
+/* 9) Apply the following styles in “We are” section:
+- already visited links should become underlined
+- the hovered links should look like “2. Consultants” item
+- add ‘new’ label to the end of words. It should be applied only for ‘Designers’ and
+‘Strategists’ items. */
+
+.heading li a:hover {
+    color: #A5DEE4;
+    text-decoration-style: double;
+}
+
+.heading li a:visited {
+    text-decoration: underline;
+}
+
+.heading li:nth-child(1):after,
+.heading li:nth-child(3):after {
+    content: 'New';
+    color: red;
+    font-size: 50%;
+    vertical-align: super;
+}
+
+
+/* 10) Add layout and styles for following block. */
+
+.blocks li.box-work {
+    padding: 10px;
+}
+
+.blocks li.box-work div p {
+    text-indent: 0;
+}
+
+.blocks li.box-work div p::first-letter {
+    color: #9C9B9B;
+}
+
+.blocks li.box-work:nth-child(2n) {
+    background-color: #F2F2F2;
+}
+
+
+/* 11) Change submit button styles. Add asterisk to email field (Figure 11 and Figure 12). */
+
+form.contact-form button {
+    background-color: transparent;
+    color: #9FD8FB;
+    float: right;
+    border-radius: 0;
+    border-color: #9FD8FB;
+    padding: 6px 36px;
+}
+
+form.contact-form button:hover {
+    background-color: #9FD8FB;
+    color: #DCF0FC;
+}
+
+form.contact-form .mandatory-field:after {
+    content: "*";
+    color: red;
+}
+
+
+/* 12) Add hover effect for navigation items (grey background) (Figure 13) */
+
+.tm-nav-item:hover {
+    background-color: #F5F5F5;
+}

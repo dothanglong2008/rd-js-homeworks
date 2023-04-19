@@ -1,0 +1,48 @@
+/* START: Task 1 Styles */
+.table {
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.table td {
+  background-color: white;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.table.green tr td {
+  background-color: green;
+}
+
+.table tr.blue td {
+  background-color: blue;
+}
+
+.table tr td.green {
+  background-color: green;
+}
+
+.table tr td.blue {
+  background-color: blue;
+}
+
+.table tr td.yellow {
+  background-color: yellow;
+}
+
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+
+/* END: Task 3 Styles */

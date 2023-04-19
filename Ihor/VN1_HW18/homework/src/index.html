@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+  <div class="flex justify-center">
+    <div class="container">
+      <h2 class="text-center">Rock, Paper, Scissors</h2>
+      <h3 class="text-center">Rules</h3>
+      <ul>
+        <li>Scissors beats a paper</li>
+        <li>Paper beats rock</li>
+        <li>Rock beats scissors</li>
+        <li>And we play up to three wins!</li>
+      </ul>
+      <h3 class="text-center">Let's play!</h3>
+      <h3 class="text-center">Round <span id="round">1</span></h3>
+      <div id="game-desk">
+        <div>
+          <h3>You: <span id="player-score">0</span></h3>
+          <h3 class="text-center" id="player-choice"></h3>
+        </div>
+        <div>
+          <h3>Computer: <span id="computer-score">0</span></h3>
+          <h3 class="text-center" id="computer-choice"></h3>
+        </div>
+      </div>
+      <button class="btn" id="rock" name="option">Rock</button>
+      <button class="btn" id="paper" name="option">Paper</button>
+      <button class="btn" id="scissors" name="option">Scissors</button>
+      <button class="btn" id="reset">Reset</button>
+      <h2 class="text-center" id="game-result-notify"></h2>
+      <ul id="game-history">
+
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

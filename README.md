@@ -1,1 +1,3 @@
-# rd-js-homeworks
+# VN-1
+
+# epam-javascript-laboratory

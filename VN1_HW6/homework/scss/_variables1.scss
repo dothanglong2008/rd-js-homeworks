@@ -1,0 +1,70 @@
+// Colors
+$white: #fff;
+$light-white: #E9E8E6;
+$dark-white: #BDC0CB;
+$black: #000;
+$light-blue: #14A0C7;
+$dark-blue: #21232E;
+$grey: #3B3F50;
+$green: #699900;
+$light-green: #64940D;
+$blue: #2F5DCD;
+$yellow: #E3AC00;
+$dark-yellow: #DEA505;
+$red: #98364D;
+$orange: #FF4E33;
+$none: transparent;
+//Background colors
+$primary-color: $dark-white;
+$body-background: $white;
+$header-background: $none;
+$box-background: $dark-blue;
+$footer-background: $dark-blue;
+$button-background: $light-green;
+// Gradient styles
+$highlight-color: $light-blue;
+$highlight-style-1: $highlight-color,
+$highlight-color;
+$highlight-style-2: $none 35%,
+$highlight-color 15%;
+$highlight-style-3: $highlight-color 80%,
+$none 10%;
+$banner-style: $green,
+$blue;
+//Text colors
+$body-text: $dark-blue;
+$header-text: $dark-blue;
+$login-background: $none;
+$login-text: $white;
+$box-heading: $white;
+$box-text: $body-text;
+$footer-text: $dark-white;
+$dark-theme-color: $white;
+$light-theme-color: $dark-blue;
+// Font-family
+$primary-font: 'Source Sans Pro',
+sans-serif;
+$secondary-font: 'Hind',
+sans-serif;
+$tertiary-font: 'Fresca',
+sans-serif;
+// Font sizes
+$medium: 14px;
+$large: 18px;
+$small: 10px;
+$font-size: ("super-large": 3rem, "larger": 2rem, "large": 1.2rem, "medium": 1rem, "small": 0.5rem);
+// Grid styles
+$grid-1: 30% 70%;
+$grid-2: 28% 72%;
+$grid-3: 32% 68%;
+$section-card-1: $grid-1;
+$section-card-2: $grid-2;
+$section-card-3: $grid-3;
+$section-card-style: (1: $section-card-1, 2: $section-card-2, 3: $section-card-3);
+// Container-display
+$primary-grid-gap: 10px;
+$full-width: 100%;
+$one-third: 30%;
+$two-third: 70%;
+// Path
+$img-path: "../img/m-h-day.jpg";

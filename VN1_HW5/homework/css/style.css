@@ -1,0 +1,682 @@
+/*
+* Colors used in design.
+*   primary: #0078aa;
+*   dark: #363636;
+*   light: #fff;
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.5em;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #0078aa;
+    font-weight: bold;
+}
+
+input {
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom: 1px solid;
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.heading {
+    flex: 1 0 100%;
+}
+
+.title {
+    padding-bottom: 5px;
+}
+
+.sub-title {
+    text-transform: uppercase;
+}
+
+path {
+    fill: #fff;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-position: left;
+    object-fit: cover;
+}
+
+.image img {
+    object-fit: cover;
+}
+
+
+/* Header */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+header .logo,
+header .navigation {
+    flex: 1 0 100%;
+    justify-content: center;
+}
+
+header .logo {
+    padding: 5px 0;
+}
+
+header .navigation ul {
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+header .navigation li {
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header .navigation ul li a:hover {
+    color: #0078aa;
+}
+
+
+/* Banner */
+
+.banner {
+    flex: 1 0 100%;
+    min-height: 300px;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.banner .content {
+    width: 100%;
+    text-align: center;
+}
+
+.banner .content .title,
+.banner .content .details,
+.banner .content .icons {
+    flex: 1 0 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.banner .content .title {
+    padding: 0 30%;
+}
+
+.banner .content .details {
+    padding: 0 2%;
+}
+
+.banner .content .icons {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.banner .content .icons .icon {
+    background-color: #0078aa;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #0078aa;
+    border-radius: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .icons .icon:hover {
+    background-color: #fff;
+}
+
+.banner .icons .icon svg {
+    width: 30px;
+}
+
+.banner .icons .icon:hover svg path {
+    fill: #0078aa;
+}
+
+
+/* About */
+
+.about {
+    overflow: hidden;
+}
+
+.about .image,
+.about .content {
+    flex: 1 0 100%;
+}
+
+.about .content {
+    align-content: center;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.sub-info .title-arrow {
+    color: #0078aa;
+    margin-right: 5px;
+}
+
+.about .content .heading .sub-title {
+    color: #0078aa;
+}
+
+.about .content .heading,
+.about .content .about-info {
+    padding: 10px 0;
+}
+
+.about .content .heading .title,
+.about .content .about-info .sub-info {
+    padding: 5px 0;
+}
+
+
+/* Services */
+
+.services {
+    flex: 1 0 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.services .content {
+    flex: 1 0 100%;
+}
+
+.services .heading {
+    flex: 1 0 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.service-boxes {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.service-title {
+    margin-bottom: 5px;
+}
+
+.service .icon img {
+    width: 50%;
+}
+
+
+/* Pricing */
+
+.pricing {
+    flex: 1 0 100%;
+    min-height: 800px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.pricing .content {
+    flex: 1 0 100%;
+    text-align: center;
+}
+
+.pricing .content .heading,
+.pricing .content .plan-boxes {
+    flex: 1 0 100%;
+}
+
+.plan-boxes {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.plan:nth-child(2n+1) {
+    color: #fff;
+}
+
+.plan:nth-child(2) {
+    border: 2px solid #0078aa;
+    color: #0078aa;
+}
+
+.plan:nth-child(2n+1) .plan-content {
+    background-color: #47C9E5;
+}
+
+.plan .plan-content {
+    grid-gap: 25px;
+    padding: 40px;
+    text-align: center;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.treatments {
+    font-style: italic;
+}
+
+.plan .icon {
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+}
+
+.plan:nth-child(2n+1) .icon svg path {
+    fill: #fff;
+}
+
+.plan:nth-child(2) .icon svg path {
+    fill: #0078aa;
+}
+
+.plan button {
+    background-color: #fff;
+    color: #0078aa;
+}
+
+.plan button:hover {
+    background-color: #0078aa;
+    color: #fff;
+}
+
+
+/* Contact */
+
+.contact {
+    overflow: hidden;
+}
+
+.contact .image,
+.contact .contact-form {
+    flex: 1 0 100%;
+}
+
+.contact-form .heading {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 30%;
+}
+
+.contact .contact-form {
+    padding: 5%;
+}
+
+.contact-form form {
+    flex: 1 0 100%;
+    justify-content: center;
+}
+
+.contact input[type="email"] {
+    border-bottom: none;
+}
+
+.contact input {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+}
+
+.contact input[type="date"] {
+    font-style: normal;
+}
+
+.contact .submit-button button {
+    background-color: #0078aa;
+    color: #fff;
+}
+
+.contact .submit-button button:hover {
+    background-color: #fff;
+    color: #0078aa;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #363636;
+    color: #fff;
+    justify-content: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.back-to-top .icon {
+    background-color: #0078aa;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #0078aa;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top .icon .up-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) {
+    .background-image {
+        object-position: 50% 50%;
+    }
+    /* Header */
+    header.flex-container {
+        flex-flow: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    header .logo,
+    header .navigation {
+        flex: 1 0 50%;
+    }
+    header .logo {
+        justify-content: flex-start;
+    }
+    header .navigation {
+        justify-content: center;
+    }
+    header .navigation li {
+        padding: 0 5px;
+    }
+    /* Banner */
+    .banner {
+        min-height: 500px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .banner .content {
+        width: 40%;
+        left: 2%;
+        text-align: left;
+    }
+    .banner .content .title,
+    .banner .content .details,
+    .banner .content .icons {
+        padding: 10px 0;
+    }
+    .banner .content .details {
+        padding-right: 20%;
+    }
+    .banner .content .icons {
+        justify-content: flex-start;
+    }
+    /* About */
+    .about .image,
+    .about .content {
+        flex: 1 0 50%;
+    }
+    .about .image img {
+        object-fit: contain;
+    }
+    .about .content {
+        text-align: left;
+        padding-left: 2%;
+    }
+    /* Services */
+    .service-boxes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Pricing */
+    .pricing .content {
+        align-content: center;
+    }
+    .pricing .content .heading {
+        padding: 40px 0;
+    }
+    .plan-boxes {
+        grid-template-columns: 35% 30% 35%;
+        grid-gap: 0;
+        padding: 0;
+    }
+    .plan:nth-child(2) {
+        padding: 20px 0;
+    }
+    .plan:nth-child(2n+1) .plan-content {
+        margin: 20px 0;
+    }
+    /* Contact */
+    .contact {
+        margin-top: 100px;
+    }
+    .contact .image,
+    .contact .contact-form {
+        flex: 1 0 50%;
+    }
+    .contact .image img {
+        object-fit: none;
+        object-position: 10% 50%;
+    }
+    .contact .image,
+    .contact .contact-form {
+        flex: 1 0 50%;
+    }
+    .contact-form .heading {
+        text-align: left;
+        padding: 0 20% 2% 0;
+    }
+    /* Footer */
+    .back-to-top {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+    }
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 1280px) {
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: center;
+        height: 100%;
+    }
+    .image img {
+        object-fit: cover;
+    }
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #fff;
+    }
+    header .logo {
+        padding-left: 10%;
+    }
+    header .navigation li {
+        padding: 0 10px;
+    }
+    /* Main */
+    /* Banner */
+    .banner {
+        flex: 1 0 100%;
+        min-height: 500px;
+        align-items: center;
+    }
+    .banner .content {
+        width: 40%;
+        left: 10%;
+    }
+    .banner .content .title,
+    .banner .content .details,
+    .banner .content .icons {
+        padding: 10px 0;
+    }
+    .banner .content .details {
+        padding-right: 25%;
+    }
+    /* About */
+    .about .image,
+    .about .content {
+        flex: 1 0 50%;
+    }
+    .about .content {
+        padding-right: 20%;
+        padding-left: 2%;
+    }
+    /* Services */
+    .services {
+        flex: 1 0 100%;
+        min-height: 500px;
+    }
+    .services .content {
+        flex: 1 0 100%;
+    }
+    .services .heading {
+        flex: 1 0 100%;
+        padding-top: 30px;
+        text-align: center;
+    }
+    .service-boxes {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 2% 10%;
+    }
+    .service {
+        background-color: #fff;
+        padding: 20px;
+    }
+    .service-title {
+        margin-bottom: 5px;
+    }
+    .service .icon img {
+        width: 50%;
+    }
+    /* Pricing */
+    .pricing {
+        flex: 1 0 100%;
+        min-height: 800px;
+    }
+    .pricing .content {
+        flex: 1 0 100%;
+        align-content: center;
+        text-align: center;
+    }
+    .pricing .content .heading,
+    .pricing .content .plan-boxes {
+        flex: 1 0 100%;
+    }
+    .plan-boxes {
+        grid-template-columns: 35% 30% 35%;
+        padding: 3% 10%;
+    }
+    .plan:nth-child(2n+1) {
+        color: #fff;
+    }
+    .plan:nth-child(2) {
+        border: 2px solid #0078aa;
+        color: #0078aa;
+        padding: 20px 0;
+    }
+    .plan:nth-child(2n+1) .plan-content {
+        margin: 20px 0;
+        background-color: #47C9E5;
+    }
+    .plan .plan-content {
+        grid-gap: 25px;
+        padding: 40px;
+        text-align: center;
+    }
+    /* Contact */
+    .contact {
+        margin-top: 20px;
+    }
+    .contact .image img {
+        object-fit: cover;
+    }
+    .contact .contact-form {
+        padding: 20px;
+    }
+}

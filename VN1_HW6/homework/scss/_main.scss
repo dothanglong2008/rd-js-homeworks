@@ -1,0 +1,276 @@
+//list
+//_mixins
+@mixin theme($background-color, $text-color) {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+@mixin background-image($img-path) {
+    background-image: url($img-path);
+    background-size: cover;
+    background-position: center;
+    border-bottom-right-radius: 50%;
+}
+
+@mixin flex-item($width) {
+    flex-basis: $width;
+}
+
+@mixin button($medium) {
+    padding: 0.7rem 1.4rem;
+    background-color: $button-background;
+    font-weight: bold;
+    border-radius: 3px;
+    color: $white;
+    border: 1px solid $button-background;
+}
+
+@mixin gradient($direction, $style) {
+    background-image: linear-gradient(to $direction, $style);
+}
+
+//_functions
+//placeholders
+%flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+%grid-container {
+    display: grid;
+    grid-gap: $primary-grid-gap;
+}
+
+%section-card {
+    @include theme($box-background, $box-text);
+    @extend %grid-container;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+%heading {
+    font-weight: bold;
+}
+
+// General
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-size: $medium;
+}
+
+p {
+    font-size: map-get($font-size, "medium");
+}
+
+body {
+    @include theme($body-background, $body-text);
+    @extend %flex-container;
+    font-family: $primary-font;
+}
+
+// Header
+header {
+    @extend %flex-container;
+    @include flex-item($full-width);
+    @include theme($header-background, $header-text);
+    @include background-image($img-path);
+    align-items: flex-start;
+    min-height: 500px;
+}
+
+.header-wrap {
+    margin-left: 100px;
+}
+
+.landing-logo {
+    @extend %flex-container;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    p {
+        @extend %flex-container;
+        @extend %heading;
+        flex-direction: column;
+        justify-content: center;
+        font-size: map-get($font-size, "large");
+        margin-left: 10px;
+        span {
+            @extend %flex-container;
+            justify-content: center;
+            font-size: map-get($font-size, "small");
+        }
+    }
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.header_heading {
+    .highlight {
+        @include gradient(bottom, $highlight-style-2);
+    }
+    @extend %heading;
+    font-size: map-get($font-size, "super-large");
+    width: 30%;
+    margin-top: 50px;
+}
+
+.header_text {
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header_action {
+    @extend %flex-container;
+    justify-content: space-between;
+    width: 30%;
+    .header_button {
+        @include button(map-get($font-size, "medium"));
+    }
+    .login {
+        @include theme($login-background, $login-text);
+    }
+}
+
+// Main
+main {
+    @extend %flex-container;
+    @include flex-item($full-width);
+}
+
+.section_text {
+    .highlight {
+        @include gradient(bottom, $highlight-style-3);
+    }
+    @extend %heading;
+    @include flex-item($full-width);
+    text-align: center;
+    font-size: map-get($font-size, "larger");
+    padding: 20px 0;
+}
+
+.section_card_wrap {
+    @extend %grid-container;
+    @include flex-item($full-width);
+    padding: 0 20%;
+}
+
+.section_card {
+    @extend %section-card;
+}
+
+// .section_card:nth-child(1) {
+//     grid-template-columns: map-get($section-card-style, 1);
+// }
+
+// .section_card:nth-child(2) {
+//     grid-template-columns: map-get($section-card-style, 2);
+// }
+
+// .section_card:nth-child(3) {
+//     grid-template-columns: map-get($section-card-style, 3);
+// }
+
+.section_card_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-position: 50% 50%;
+    object-fit: cover;
+}
+
+.section_card_right_container {
+    @extend %flex-container;
+    border-radius: 2px;
+}
+
+.section_card_heading {
+    @extend %heading;
+    color: $box-heading;
+    padding: 10px 0;
+}
+
+@for $i from 1 through 3 {
+    .section_card:nth-child(#{$i}) {
+        grid-template-columns: map-get($section-card-style, $i);
+    }
+}
+
+.section_card_text {
+    color: $primary-color;
+    padding: 0 10%;
+}
+
+.section_link {
+    color: $primary-color;
+    padding: 10px;
+}
+
+.section_banner {
+    @include gradient(right, $banner-style);
+    @extend %flex-container;
+    justify-content: space-around;
+    width: 65%;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    border-radius: 2px;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.section_banner_heading {
+    .highlight {
+        padding-top: 8px;
+        @include gradient(bottom, $highlight-style-1);
+    }
+    @extend %heading;
+    margin-bottom: 5px;
+    font-size: map-get($font-size, "large");
+}
+
+.section_banner_text {
+    color: $primary-color;
+    font-size: map-get($font-size, "small");
+}
+
+.section_banner_button {
+    @include button(map-get($font-size, "medium"));
+}
+
+// Footer
+footer {
+    @include theme($footer-background, $footer-text);
+    @extend %flex-container;
+    @include flex-item($full-width);
+    background-color: $box-background;
+    color: $primary-color;
+}
+
+.footer-wrap {
+    @extend %grid-container;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 80px 80px 30px 100px;
+}
+
+.footer_logo {
+    @extend %flex-container;
+    justify-content: flex-start;
+}
+
+.footer_text {
+    @extend %flex-container;
+    justify-content: center;
+}
+
+.footer-cr {
+    @extend %flex-container;
+    justify-content: flex-end;
+}
